@@ -91,10 +91,11 @@ public class Firma {
 		s1 = String.format("%-20s%n", "Lista pracowników");
 		s2 = String.format("%-3s%-30s%-10s%-5s%n", "Lp", "nazwisko", "grupa", "etat");
 		Iterator<Pracownik> iterator = lista.iterator();
+		int i=1;
 		while (iterator.hasNext()) {
 			Pracownik prac = iterator.next();
-			s3 = String.format("%-3i%-30s%-10s%-5d%n",1, prac.nazwisko, prac.getClass(), prac.etat);
-		}
+			s3 = String.format("%-3d%-30s%-10s%-5f%n",i, prac.nazwisko, prac.getClass().getName(), prac.etat);
+			i++;}
 		String s = s1 + s2 + s3;
 		System.out.println(s);
 		return s;
