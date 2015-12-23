@@ -3,6 +3,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.math.*;
 import java.math.*;
+
 public class Firma {
 
 	List<Pracownik> lista;
@@ -81,43 +82,52 @@ public class Firma {
 		double[] tab = { sumaWyplatU, sumaWyplatR };
 		return tab;
 	}
-//  tyle na korkach
+
+	// tyle na korkach
 	public String wydrukListyPrac() {
-		String s1;String s2;String s3="";
-		s1= String.format("%-20s%n", "Lista pracowników");
-		s2= String.format("%-3s%-30s%-10s%-5s%n","Lp", "nazwisko", "grupa", "etat");
+		String s1;
+		String s2;
+		String s3 = "";
+		s1 = String.format("%-20s%n", "Lista pracowników");
+		s2 = String.format("%-3s%-30s%-10s%-5s%n", "Lp", "nazwisko", "grupa", "etat");
 		Iterator<Pracownik> iterator = lista.iterator();
 		while (iterator.hasNext()) {
 			Pracownik prac = iterator.next();
-		s3=String.format("%-3i%-30s%-10s%-5d%n", prac.nazwisko,prac.getClass(),prac.etat);}
-		String s= s1 + s2+s3;
+			s3 = String.format("%-3i%-30s%-10s%-5d%n",1, prac.nazwisko, prac.getClass(), prac.etat);
+		}
+		String s = s1 + s2 + s3;
 		System.out.println(s);
 		return s;
 
 	}
-	
 
 	public String wydrukListyUrz() {
-	String s1;String s2;String s3;
-	s1= String.format("%-20s%n", "Lista urzêdników");
-	s2= String.format("%-3s%-30s%-5s%n","Lp", "nazwisko", "etat");
-	return s;		
+		String s1;
+		String s2;
+		String s3;
+		s1 = String.format("%-20s%n", "Lista urzêdników");
+		s2 = String.format("%-3s%-30s%-5s%n", "Lp", "nazwisko", "etat");
+		return s;
 	}
 
 	public String wydrukListyR() {
-	String s1;String s2; String s3;	
-	s1= String.format("%-20s%n", "Lista robotników");
-	s2= String.format("%-3s%-30s%-5s%n","Lp", "nazwisko", "etat");
-	return s;
+		String s1;
+		String s2;
+		String s3;
+		s1 = String.format("%-20s%n", "Lista robotników");
+		s2 = String.format("%-3s%-30s%-5s%n", "Lp", "nazwisko", "etat");
+		return s;
 	}
 
 	public String wydrukListyPlac() {
-		String s1;String s2; String s3;
-		s1= String.format("%-20s%n", "Lista p³ac");
-		s2= String.format("%-3s%-30s%-10s%-5s%#5d%n", "Lp", "nazwisko", "grupa", "etat", "wyp³ata");
-		String s=s1+s2+s3;
+		String s1;
+		String s2;
+		String s3;
+		s1 = String.format("%-20s%n", "Lista p³ac");
+		s2 = String.format("%-3s%-30s%-10s%-5s%#5d%n", "Lp", "nazwisko", "grupa", "etat", "wyp³ata");
+		String s = s1 + s2 + s3;
 		System.out.println(s);
 		return s;
-		
+
 	}
 }
