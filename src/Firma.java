@@ -83,7 +83,7 @@ public class Firma {
 	}
 //  tyle na korkach
 	public String wydrukListyPrac() {
-		String s1;String s2;String s3=null;
+		String s1;String s2;String s3="";
 		s1= String.format("%-20s%n", "Lista pracowników");
 		s2= String.format("%-3s%-30s%-10s%-5s%n","Lp", "nazwisko", "grupa", "etat");
 		Iterator<Pracownik> iterator = lista.iterator();
